@@ -32,10 +32,10 @@ app.get('/api/whoami', (req, res) => {
   const ipAddress = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
   // Retrieve client's preferred language from request headers
-  const language = req.headers['Accept-language'];
+  const language = req.headers['accept-language'];
 
   // Retrieve client's user agent (software) from request headers
-  const software = req.headers['User-agent'];
+  const software = req.headers['user-agent'];
 
   // Return JSON response with IP address, language, and software
   res.json({ ipaddress: ipAddress, language: language, software: software });
